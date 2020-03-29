@@ -3,6 +3,9 @@ import Unit from "./components/unit";
 import ToggleFilterButton from "./components/toggle-filter-button";
 import "./App.css";
 import UnitService from "./services/unit-service";
+import ReactGA from "react-ga";
+ReactGA.initialize("UA-162177681-1");
+ReactGA.pageview(window.location.pathname + window.location.search);
 const todos = [
   "Fix any incorrect unit data",
   "Add ability to put your own composition of units in, show total resistances etc",

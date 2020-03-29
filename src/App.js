@@ -81,7 +81,7 @@ function App() {
             </div>
           </div>
           <div className="filter-cat rarities">
-            <label>Raririty</label>
+            <label>Rarity</label>
             <div className="filter-options">
               {rarityTypes.map(rarity => (
                 <ToggleFilterButton

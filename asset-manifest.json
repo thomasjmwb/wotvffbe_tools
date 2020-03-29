@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/wotvffbe_tools/static/css/main.8bdc1e70.chunk.css",
+    "main.js": "/wotvffbe_tools/static/js/main.2002fe7d.chunk.js",
+    "main.js.map": "/wotvffbe_tools/static/js/main.2002fe7d.chunk.js.map",
+    "runtime-main.js": "/wotvffbe_tools/static/js/runtime-main.53279aae.js",
+    "runtime-main.js.map": "/wotvffbe_tools/static/js/runtime-main.53279aae.js.map",
+    "static/js/2.4427d23e.chunk.js": "/wotvffbe_tools/static/js/2.4427d23e.chunk.js",
+    "static/js/2.4427d23e.chunk.js.map": "/wotvffbe_tools/static/js/2.4427d23e.chunk.js.map",
+    "index.html": "/wotvffbe_tools/index.html",
+    "precache-manifest.ee0c020d7198aabec1a00c8b23598e8a.js": "/wotvffbe_tools/precache-manifest.ee0c020d7198aabec1a00c8b23598e8a.js",
+    "service-worker.js": "/wotvffbe_tools/service-worker.js",
+    "static/css/main.8bdc1e70.chunk.css.map": "/wotvffbe_tools/static/css/main.8bdc1e70.chunk.css.map",
+    "static/js/2.4427d23e.chunk.js.LICENSE.txt": "/wotvffbe_tools/static/js/2.4427d23e.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.53279aae.js",
+    "static/js/2.4427d23e.chunk.js",
+    "static/css/main.8bdc1e70.chunk.css",
+    "static/js/main.2002fe7d.chunk.js"
+  ]
+}

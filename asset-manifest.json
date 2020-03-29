@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/wotvffbe_tools/static/css/main.dd437e04.chunk.css",
-    "main.js": "/wotvffbe_tools/static/js/main.831f2000.chunk.js",
-    "main.js.map": "/wotvffbe_tools/static/js/main.831f2000.chunk.js.map",
+    "main.js": "/wotvffbe_tools/static/js/main.797075a1.chunk.js",
+    "main.js.map": "/wotvffbe_tools/static/js/main.797075a1.chunk.js.map",
     "runtime-main.js": "/wotvffbe_tools/static/js/runtime-main.53279aae.js",
     "runtime-main.js.map": "/wotvffbe_tools/static/js/runtime-main.53279aae.js.map",
     "static/js/2.7ab0abe3.chunk.js": "/wotvffbe_tools/static/js/2.7ab0abe3.chunk.js",
     "static/js/2.7ab0abe3.chunk.js.map": "/wotvffbe_tools/static/js/2.7ab0abe3.chunk.js.map",
     "index.html": "/wotvffbe_tools/index.html",
-    "precache-manifest.f26069ecb1b722cd67265cae8be7b494.js": "/wotvffbe_tools/precache-manifest.f26069ecb1b722cd67265cae8be7b494.js",
+    "precache-manifest.4e9d1fff6bbee2111b5a1b79a0cf5d6b.js": "/wotvffbe_tools/precache-manifest.4e9d1fff6bbee2111b5a1b79a0cf5d6b.js",
     "service-worker.js": "/wotvffbe_tools/service-worker.js",
     "static/css/main.dd437e04.chunk.css.map": "/wotvffbe_tools/static/css/main.dd437e04.chunk.css.map",
     "static/js/2.7ab0abe3.chunk.js.LICENSE.txt": "/wotvffbe_tools/static/js/2.7ab0abe3.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.53279aae.js",
     "static/js/2.7ab0abe3.chunk.js",
     "static/css/main.dd437e04.chunk.css",
-    "static/js/main.831f2000.chunk.js"
+    "static/js/main.797075a1.chunk.js"
   ]
 }

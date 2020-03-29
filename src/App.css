@@ -17,11 +17,24 @@ button.active {
   font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.filter-cat {
+  display: flex;
+}
+.filter-cat label {
+  width: 150px;
+}
+
+.units-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.unit {
+  width: 200px;
+  margin: 5px;
+  background: #a69be2;
+  padding: 5px;
+  display: flex;
+}
+.unit img {
+  margin-right: 10px;
 }

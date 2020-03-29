@@ -17,12 +17,30 @@ function UnitService() {
   const nameFilter = (unit, filter) => {
     return unit.name.toLowerCase().indexOf(filter.name.toLowerCase()) > -1;
   };
-  const elementFilter = (unit, filter) => {
-    return !!filter.elements[unit.elementType];
+  const toggleFilter = (filterProperty, unitFilterProperty) => (
+    unit,
+    filter
+  ) => {
+    return filter[filterProperty]
+      .map(text => text.toLowerCase())
+      .includes(unit[unitFilterProperty].toLowerCase());
+  };
+  const resistancesFilter = (filterProperty, greaterThan) => (unit, filter) => {
+    return filter[filterProperty].every(resistanceName => {
+      return greaterThan
+        ? unit[resistanceName.toLowerCase()] > 0
+        : unit[resistanceName.toLowerCase()] < 0;
+    });
   };
   const filterPropertyToFunctionMap = {
     name: nameFilter,
-    elements: elementFilter
+    elementTypes: toggleFilter("elementTypes", "elementType"),
+    rarities: toggleFilter("rarities", "rarity"),
+    elementResistances: resistancesFilter("elementResistances", true),
+    elementWeaknesses: resistancesFilter("elementResistances", false),
+    attackResistances: resistancesFilter("attackResistances", true),
+    attackWeaknesses: resistancesFilter("attackWeaknesses", false),
+    attackTypes: toggleFilter("attackTypes", "attackType")
   };
   // return units list
   // filterable by name, rarity, element, resistances,
@@ -35,7 +53,6 @@ function UnitService() {
         filtersList.push(filterPropertyToFunctionMap[filterProperty]);
       }
     });
-    debugger;
     return this.getUnits().then(units => {
       return units.filter(unit => {
         return filtersList.every(filterFunction => {

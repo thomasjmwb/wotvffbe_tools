@@ -15,11 +15,18 @@ body {
 .App-link {
   color: #61dafb;
 }
-
+.capitalize {
+  text-transform: capitalize;
+}
 button.active {
   font-weight: bold;
 }
-.filters {
+.tier-1 {
+  display: flex;
+}
+.filters,
+.notes {
+  text-align: left;
   padding: 5px;
   border: 1px solid #3d1b04;
   background: #dcdcdc;

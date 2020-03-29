@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "39bee00af32d841e2719229b3d54878d",
+    "revision": "628d52c108975d42bd631f3b891ed42a",
     "url": "/wotvffbe_tools/index.html"
   },
   {
-    "revision": "0a6887e990c6a45f69f3",
-    "url": "/wotvffbe_tools/static/css/main.8bdc1e70.chunk.css"
+    "revision": "041e3e39336d8718aa33",
+    "url": "/wotvffbe_tools/static/css/main.f7dfeaa1.chunk.css"
   },
   {
     "revision": "e915fe20129188794013",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/wotvffbe_tools/static/js/2.4427d23e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0a6887e990c6a45f69f3",
+    "revision": "041e3e39336d8718aa33",
     "url": "/wotvffbe_tools/static/js/main.2002fe7d.chunk.js"
   },
   {

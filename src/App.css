@@ -1,0 +1,27 @@
+.App {
+  text-align: center;
+  background: #282c34;
+}
+
+.App-header {
+  background-color: #596172;
+  color: white;
+  height: 40px;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+button.active {
+  font-weight: bold;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

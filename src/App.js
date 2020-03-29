@@ -3,6 +3,13 @@ import Unit from "./components/unit";
 import ToggleFilterButton from "./components/toggle-filter-button";
 import "./App.css";
 import UnitService from "./services/unit-service";
+const todos = [
+  "Fix any incorrect unit data",
+  "Add ability to put your own composition of units in, show total resistances etc",
+  "Composition helper",
+  "Composition counter tool",
+  "improve mobile experience"
+];
 const filtersTemplate = {
   elementTypes: [],
   elementResistances: [],
@@ -53,78 +60,88 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">WotVFFBE tools</header>
-      <div className="filters">
-        <div className="filter-cat elementTypes">
-          <label>Element</label>
-          <div className="filter-options">
-            {elementTypes.map(element => (
-              <ToggleFilterButton
-                key={element}
-                filterProperty="elementTypes"
-                filterValue={element}
-                active={filters.elementTypes.includes(element)}
-                click={toggleFilters}
-              ></ToggleFilterButton>
-            ))}
+      <div className="tier-1">
+        <div className="filters">
+          <h3>Filters</h3>
+          <div className="filter-cat elementTypes">
+            <label>Element</label>
+            <div className="filter-options">
+              {elementTypes.map(element => (
+                <ToggleFilterButton
+                  key={element}
+                  filterProperty="elementTypes"
+                  filterValue={element}
+                  active={filters.elementTypes.includes(element)}
+                  click={toggleFilters}
+                ></ToggleFilterButton>
+              ))}
+            </div>
+          </div>
+          <div className="filter-cat rarities">
+            <label>Raririty</label>
+            <div className="filter-options">
+              {rarityTypes.map(rarity => (
+                <ToggleFilterButton
+                  key={rarity}
+                  filterProperty="rarities"
+                  filterValue={rarity}
+                  active={filters.rarities.includes(rarity)}
+                  click={toggleFilters}
+                ></ToggleFilterButton>
+              ))}
+            </div>
+          </div>
+          <div className="filter-cat elementResistances">
+            <label>Element Resistances</label>
+            <div className="filter-options">
+              {elementTypes.map(element => (
+                <ToggleFilterButton
+                  key={element}
+                  filterProperty="elementResistances"
+                  filterValue={element}
+                  active={filters.elementResistances.includes(element)}
+                  click={toggleFilters}
+                ></ToggleFilterButton>
+              ))}
+            </div>
+          </div>
+          <div className="filter-cat attackTypes">
+            <label>Attack Type</label>
+            <div className="filter-options">
+              {// slice out magic, its not an attack type on any units by default but it is an attack type weakness
+              attackTypes.slice(0, 4).map(element => (
+                <ToggleFilterButton
+                  key={element}
+                  filterProperty="attackTypes"
+                  filterValue={element}
+                  active={filters.attackTypes.includes(element)}
+                  click={toggleFilters}
+                ></ToggleFilterButton>
+              ))}
+            </div>
+          </div>
+          <div className="filter-cat name">
+            <label>Name</label>
+            <div className="filter-options">
+              <input
+                placeholder="name"
+                onChange={e => {
+                  applyNameFilter(e.target.value);
+                }}
+                type="text"
+              />
+            </div>
           </div>
         </div>
-        <div className="filter-cat rarities">
-          <label>Raririty</label>
-          <div className="filter-options">
-            {rarityTypes.map(rarity => (
-              <ToggleFilterButton
-                key={rarity}
-                filterProperty="rarities"
-                filterValue={rarity}
-                active={filters.rarities.includes(rarity)}
-                click={toggleFilters}
-              ></ToggleFilterButton>
+        <div className="notes">
+          <h3>Todo:</h3>
+          <ul>
+            {todos.map((text, i) => (
+              <li key={i}>{text}</li>
             ))}
-          </div>
-        </div>
-        <div className="filter-cat elementResistances">
-          <label>Element Resistances</label>
-          <div className="filter-options">
-            {elementTypes.map(element => (
-              <ToggleFilterButton
-                key={element}
-                filterProperty="elementResistances"
-                filterValue={element}
-                active={filters.elementResistances.includes(element)}
-                click={toggleFilters}
-              ></ToggleFilterButton>
-            ))}
-          </div>
-        </div>
-        <div className="filter-cat attackTypes">
-          <label>Attack Type</label>
-          <div className="filter-options">
-            {// slice out magic, its not an attack type on any units by default but it is an attack type weakness
-            attackTypes.slice(0, 4).map(element => (
-              <ToggleFilterButton
-                key={element}
-                filterProperty="attackTypes"
-                filterValue={element}
-                active={filters.attackTypes.includes(element)}
-                click={toggleFilters}
-              ></ToggleFilterButton>
-            ))}
-          </div>
-        </div>
-        <div className="filter-cat name">
-          <label>Name</label>
-          <div className="filter-options">
-            <input
-              placeholder="name"
-              onChange={e => {
-                applyNameFilter(e.target.value);
-              }}
-              type="text"
-            />
-          </div>
+          </ul>
         </div>
       </div>
-
       <div>Count: {units.length}</div>
       <div className="units-list">
         {units.map(unit => {

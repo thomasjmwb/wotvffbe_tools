@@ -8,8 +8,9 @@ export default function Unit({ unit }) {
       <img className="img" width="100" src={unit.img} alt={unit.name} />
       <div className="info">
         <div className="head">
-          <span className="name">{unit.name}</span> - {unit.elementType} -{" "}
-          {unit.attackType}
+          <span className="name capitalize">{unit.name}</span> -{" "}
+          <span className="capitalize">{unit.elementType}</span> -
+          <span className="capitalize">{unit.attackType}</span>
         </div>
         <div className="body">
           <table>

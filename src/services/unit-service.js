@@ -26,7 +26,7 @@ function UnitService() {
       .includes(unit[unitFilterProperty].toLowerCase());
   };
   const resistancesFilter = (filterProperty, greaterThan) => (unit, filter) => {
-    return filter[filterProperty].every(resistanceName => {
+    return filter[filterProperty].some(resistanceName => {
       return greaterThan
         ? unit[resistanceName.toLowerCase()] > 0
         : unit[resistanceName.toLowerCase()] < 0;

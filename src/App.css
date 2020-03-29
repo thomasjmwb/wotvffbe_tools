@@ -1,10 +1,13 @@
+body {
+  background: #80726c;
+}
 .App {
   text-align: center;
-  background: #282c34;
 }
 
 .App-header {
-  background-color: #596172;
+  background-color: #1f1406;
+  padding-top: 13px;
   color: white;
   height: 40px;
 }
@@ -16,7 +19,13 @@
 button.active {
   font-weight: bold;
 }
-
+.filters {
+  padding: 5px;
+  border: 1px solid #3d1b04;
+  background: #dcdcdc;
+  width: 540px;
+  margin: 5px;
+}
 .filter-cat {
   display: flex;
 }
@@ -29,12 +38,43 @@ button.active {
   flex-wrap: wrap;
 }
 .unit {
-  width: 200px;
+  width: 500px;
   margin: 5px;
-  background: #a69be2;
+  background: #271601;
+  border: 1px solid #7c6548;
+  color: white;
   padding: 5px;
   display: flex;
 }
+.unit table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 5px;
+}
+.unit th {
+  font-weight: 400;
+  font-style: italic;
+  background: #584d4a;
+}
+.unit td,
+.unit th {
+  border: 1px solid #a0a0a0;
+}
 .unit img {
-  margin-right: 10px;
+  margin-right: 5px;
+}
+.unit .info {
+  background: #332319;
+  width: 100%;
+}
+.unit .head {
+  font-size: 16px;
+  background: #a59a95;
+  color: #262626;
+}
+.unit .name {
+  font-weight: bold;
+}
+.unit .body {
+  font-size: 14px;
 }
